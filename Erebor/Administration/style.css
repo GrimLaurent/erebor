@@ -1,0 +1,825 @@
+/*
+Theme Name: Thème Erebor
+Author: the Erebor team
+Description: Erebor Style CSS
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 0.0 - Normalisation
+ * 1.0 - Logo
+ * 2.0 - Barre de navigation
+ * 3.0 - Menu de navigation
+ */
+
+/**
+ * 0.0 - Normalisation
+ *
+ * Normalisation du code (balise de base)
+ */
+ html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background: #e0e0e0;
+ }
+
+ body {
+ 	margin: 0;
+ 	background-image:url("/Erebor/images/wallpaper/wallpaper.jpg");
+	background-size: 100% 100%;
+	background-attachment:fixed;
+ }
+
+ body,
+ button,
+ input,
+ select,
+ textarea {
+	color: #1a1a1a;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+ }
+
+ a {
+ 	text-decoration: none;
+	color : black;
+ }
+
+ nav {
+	border-bottom: 1px solid rgb(224, 224, 224);
+ }
+
+ #structure-nav {
+ 	transition: 0.2s;
+ }
+
+/**
+ * 1.0 - Logo
+ *
+ * Le logo du site web
+ */
+ #logo {
+ 	background-image:url("/Erebor/vue/image/Erebor.png");
+	background-size: 100% 100%;
+	background-attachment:fixed;
+	height: 64px;
+	width: 200px;
+	float: left;
+ }
+
+/**
+ * 2.0 - Barre de navigation
+ *
+ * Barre de navigation de niveau 1 et 2 suivant le scrolling de l'utilisateur
+ */
+
+ #nav-bar {
+ 	background: #424242;
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+ 	width: 100%;
+ 	height: 64px;
+ 	position: fixed;
+
+ }
+ 
+ #structure-nav {
+ 	margin-left: 5%;
+ 	margin-right: 5%;
+ }
+
+ #btn-volet {
+ 	background-image:url("/Erebor/vue/image/data/menu.svg");
+	background-size: 100% 100%;
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin: 15px 15px 0px 0px;
+ }
+
+  #wallpaper-menu {
+  	background-image:url("/Erebor/vue/image/wallpaper1.jpg");
+	background-size: 100% 100%;
+	height: 200px;
+	width: 100%;
+	margin-top: -20px;
+  }
+
+  .btn-navigation {
+  	line-height: 40px;
+  }
+
+  .btn-navigation:hover {
+  	background-color: grey;
+  }
+/**
+ * 3.0 - Barre d'information
+ *
+ * Barre de navigation fixé en bas de la page du site web
+ */
+
+ #bottom-bar {
+ 	background: #eeeeee;
+	width: 100%;
+	height: 34px;
+	position: fixed;
+	bottom: 0px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+ }
+
+  #btn-bar {
+ 	height: 34px;
+ 	background: #eeeeee;
+ 	float: left;
+ }
+
+ .btn-lieu {
+ 	width: 60%;
+ }
+
+ .btn-mobile {
+ 	width: 20%;
+ }
+
+ .btn-email {
+ 	width: 20%;
+ }
+
+ #icon-bar {
+	height: 26px;
+	width: 26px;
+	float: left;
+	margin: 4px;
+ }
+
+ .icon-contacter {
+ 	background-image:url("/Erebor/vue/image/data/mail.svg");
+	background-size: 100% 100%; 
+ }
+
+ .icon-appeller{
+ 	background-image:url("/Erebor/vue/image/data/mobile.svg");
+	background-size: 100% 100%; 
+ }
+
+ .icon-lieux {
+ 	background-image:url("/Erebor/vue/image/data/location.svg");
+	background-size: 100% 100%; 
+ }
+
+ .texte-btn-bar {
+ 	margin: 3px;
+ }
+
+ .display {
+ 	display: none;
+ }
+ /**
+ * 4.0 - Menu de navigation
+ *
+ * Menu de navigation sur l'ensemble des sites
+ */
+#volet {
+	background-color:white;
+	box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.7);
+}
+
+#volet a.ouvrir:hover,
+#volet a.fermer:hover {
+    text-decoration: none;
+    background-color: #DBE0E4;
+}
+
+#volet {
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    left: -310px;
+    z-index: 100;
+}
+
+#volet a.ouvrir{
+	position: fixed;
+	padding: 0px;
+	width: 40px;
+	top: 5px;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	line-height: 40px;
+}
+
+#volet a.fermer {
+	position: relative;
+	width: 41px;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	border-radius: 170px;
+	line-height: 41px;
+	float: right;
+	margin: 6px;
+}
+
+#volet a.ouvrir {
+	left: 25px;
+}
+
+#volet a.fermer {
+	display: none;
+}
+
+#volet:target {
+    left: 0;
+}
+
+#volet_clos:target #volet {
+    left: -310px;
+}
+
+#volet:target a.ouvrir {
+    display: none;
+}
+
+#volet:target a.fermer {
+    display: block;
+}
+
+#title-volet {
+	padding: 10px;
+	font-size: 20px;
+}
+
+#copyright {
+	font-size: 9px;
+	padding: 13px;
+}
+
+.btn-navigation {
+	float: left;
+	height: 40px;
+	width: 240px;
+}
+
+/**
+ * 5.0 - Menu lieu
+ *
+ * Menu affichant les lieux à visiter
+ */
+#lieu {
+	background-color:white;
+	box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.7);
+}
+
+#lieu a.open:hover,
+#lieu a.fermer:hover {
+    text-decoration: none;
+    background-color: #DBE0E4;
+}
+
+#lieu {
+    width: 280px;
+    height: 100%;
+    position: fixed;
+    right: -310px;
+    z-index: 100;
+}
+
+#lieu a.open{
+	position: fixed;
+	padding: 0px;
+	width: 40px;
+	top: 5px;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	line-height: 40px;
+}
+
+#lieu a.fermer {
+	position: relative;
+	width: 1.3em;
+	height: 1.3em;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	border-radius: 170px;
+	line-height: 41px;
+	float: right;
+	margin: 15px;
+}
+
+#lieu a.open {
+	left: 25px;
+}
+
+#lieu a.fermer {
+	display: none;
+}
+
+#lieu:target {
+    right: 0;
+}
+
+#lieu_clos:target #lieu {
+    right: -310px;
+}
+
+#lieu:target a.open {
+    display: none;
+}
+
+#lieu:target a.fermer {
+    display: block;
+}
+
+#copyright {
+	font-size: 9px;
+	padding: 13px;
+}
+
+#titre-volet-lieu {
+	padding: 10px;
+	font-size: 20px;
+	margin-top: 0;
+	border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.imglieu {
+	height: 140px;
+	width: 280px;
+} 
+
+#lieutexte {
+	background:  #2196f3;
+	padding: 6px;
+	color: white;
+	margin-bottom: 8px;
+	float: left;
+	width: 100%;
+}
+
+ #btn-visite-lieu {
+ 	background-image:url("/Erebor/vue/image/data/view.svg");
+	background-size: 100% 100%; 
+	float: right;
+	height: 24px;
+	width: 24px;
+	margin-right: 20px;
+ }
+/**
+ * 5.0 - Menu lieu
+ *
+ * Menu affichant les lieux à visiter
+ */
+#contact {
+	background-color:white;
+	box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.7);
+}
+
+#contact a.open:hover,
+#contact a.fermer:hover {
+    text-decoration: none;
+    background-color: #DBE0E4;
+}
+
+#contact {
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    right: -320px;
+    z-index: 100;
+}
+
+#contact a.open{
+	position: fixed;
+	padding: 0px;
+	width: 40px;
+	top: 5px;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	line-height: 40px;
+}
+
+#contact a.fermer {
+	position: relative;
+	width: 1.3em;
+	height: 1.3em;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+	border-radius: 170px;
+	line-height: 41px;
+	float: right;
+	margin: 15px;
+}
+
+#contact a.open {
+	left: 25px;
+}
+
+#contact a.fermer {
+	display: none;
+}
+
+#contact:target {
+    right: 0;
+}
+
+#contact_clos:target #contact {
+    right: -320px;
+}
+
+#contact:target a.open {
+    display: none;
+}
+
+#contact:target a.fermer {
+    display: block;
+}
+
+#title-contact {
+	padding: 10px;
+	font-size: 20px;
+	margin-top: 0;
+	border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+#copyright {
+	font-size: 9px;
+	padding: 13px;
+}
+
+#btn-contact {
+	text-align: center;
+	background: #2196f3;
+	padding: 9px;
+	margin-bottom: 4px;
+	color: white;
+}
+/**
+ * 6.0 - Design
+ *
+ * Interface de mise en page
+ */
+
+ #design {
+ 	background: #616161;
+	height: 120px;
+	width: 100%;
+ }
+
+ #corps {
+	background: #fafafa;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+	max-width: 1320px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -100px;
+ }
+
+ .content {
+ 	padding: 12px;
+ }
+
+ .separation {
+ 	width: 100%;
+ 	height: 1px;
+ 	background: black;
+ }
+
+ #titresection {
+ 	text-align: center;
+	font-size: 24px;
+ }
+
+ .bandeau {
+ 	background-image:url("/Erebor/vue/image/wallpaper.jpg");
+	background-size: 100% 100%; 
+ 	width: 100%;
+ 	height: 240px;
+ }
+ #le_bouton {
+   position: fixed;
+   top: **px;
+   left: **px;
+}
+
+.description {
+	font-size: 12px;
+}
+
+.prixdetail {
+	background: #00e676;
+	width: 110px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 13px;
+	color: white;
+}
+
+#btn-detail {
+	background: #e91e63;
+	padding: 5px;
+	height: 42px;
+	width: 90%;
+	color: white;
+}
+
+ .btn-detail {
+ 	line-height: 8px;
+ 	float: left;
+	margin-left: 1px;
+ }
+
+ .btn-img-detail {
+ 	background-image:url("/Erebor/vue/image/data/bed.svg");
+	background-size: 100% 100%;
+	height: 20px;
+	width: 20px;
+	float: left;
+	margin: 9px 3px 3px 3px;
+ }
+
+ .img-detail {
+	width: 100%;
+	margin: 4px;
+ }
+
+/**
+ * 8.0 - Les chambres
+ *
+ * Page affichant les chambres
+ */
+
+#blockchambre {
+	background: white;
+	max-width: 296px;
+	height: 370px;
+	margin-bottom: 13px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.imgchambre {
+	width: 100%;
+	height: 250px;
+	float: left;
+}
+
+#textechambre {
+	float: left;
+	font-size: 22px;
+	margin: 5px;
+}
+
+#btnchambre {
+	float: left;
+	margin-left: 10px;
+	margin-top: 7px;
+	background: #e91e63;
+	padding: 5px;
+	border-radius: 7px;
+	color: white;
+}
+
+#btn-info {
+	float: right;
+	margin-right: 10px;
+	background: #e91e63;
+	padding: 5px;
+	border-radius: 50px;
+	height: 42px;
+	width: 42px;
+	color: white;
+}
+
+ .btn-info {
+ 	line-height: 8px;
+ 	float: left;
+	margin-left: 1px;
+ }
+
+ .btn-img-user {
+ 	background-image:url("/Erebor/vue/image/data/bed.svg");
+	background-size: 100% 100%;
+	height: 20px;
+	width: 20px;
+	float: right;
+	margin: 9px 3px 3px 3px;
+ }
+
+/**
+ * 9.0 - Les activités
+ *
+ * Page affichant les activités
+ */
+
+#blockactivite {
+	background: white;
+	max-width: 296px;
+	height: 400px;
+	margin-bottom: 13px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.imgactivite {
+	width: 100%;
+	height: 250px;
+	float: left;
+}
+
+#texteactivite {
+	float: left;
+	font-size: 22px;
+	margin: 5px;
+}
+
+#btnactivite {
+	float: left;
+	margin-left: 10px;
+	margin-top: 7px;
+	background: #e91e63;
+	padding: 5px;
+	border-radius: 7px;
+	color: white;
+}
+
+#btn-info {
+	float: right;
+	margin-right: 10px;
+	background: #e91e63;
+	padding: 5px;
+	border-radius: 50px;
+	height: 42px;
+	width: 42px;
+	color: white;
+}
+
+ .btn-info {
+ 	line-height: 8px;
+ 	float: left;
+	margin-left: 1px;
+ }
+
+ .btn-img-user {
+ 	background-image:url("/Erebor/vue/image/data/bed.svg");
+	background-size: 100% 100%;
+	height: 20px;
+	width: 20px;
+	float: right;
+	margin: 9px 3px 3px 3px;
+ }
+ 
+/**
+ * 14.0 - Media Queries
+ */
+
+/**
+ * Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+
+/**
+ * 14.1 - >= 710px
+ */
+
+@media screen and (min-width: 44.375em) {
+/**
+ * 8.0 - Les chambres
+ *
+ * Page affichant les chambres
+ */
+
+#blockchambre {
+	background: white;
+	max-width: 1320px;
+	height: 250px;
+	margin-bottom: 13px;
+}
+
+.imgchambre {
+	width: 250px;
+	height: 250px;
+	float: left;
+}
+
+#textechambre {
+	float: left;
+	font-size: 22px;
+	margin: 5px;
+}
+
+#btnchambre {
+	float: right;
+	margin-top: 160px;
+	margin-right: 30px;
+	margin-left: none;
+	background: #e91e63;
+	padding: 5px;
+	border-radius: 7px;
+	color: white;
+}
+
+#btn-info {
+	margin-top: 154px;
+}
+
+/**
+ * 9.0 - Les activités
+ *
+ * Page affichant les activités
+ */
+
+ #blockactivite {
+	background: white;
+	max-width: 1320px;
+	height: 250px;
+	margin-bottom: 13px;
+}
+
+.imgactivite {
+	width: 250px;
+	height: 250px;
+	float: left;
+}
+
+#texteactivite {
+	float: left;
+	font-size: 22px;
+	margin: 5px;
+}
+
+.bandeau {
+ 	height: 340px;
+ }
+
+  #design {
+ 	background: #616161;
+	height: 350px;
+	width: 100%;
+ }
+
+  .display {
+ 	display: inherit !important;
+ }
+
+  .img-detail {
+	width: 340px;
+	margin: 4px;
+ }
+
+  #blockimg {
+  	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+	#btn-detail {
+		float: left;
+		background: #e91e63;
+		padding: 5px;
+		height: 42px;
+		width: 24.22%;
+		color: white;
+	}
+
+ .btn-detail {
+ 	line-height: 8px;
+ 	float: left;
+	margin-left: 1px;
+ }
+
+  .img-detail {
+	width: 49.3%;
+	margin: 4px;
+ }
+
+  #blockimg {
+  	max-width: none;
+	margin-left: none;
+	margin-right: none;
+  }
+}
