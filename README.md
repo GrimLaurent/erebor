@@ -1,5 +1,6 @@
 # Erebor
-Projet de second année de BTS , Le Gîte Erebor ( projet fictif dans le cadre de mes études )
+
+Projet de seconde année de BTS, Le Gîte Erebor (projet fictif dans le cadre de mes études)
 
 # Condition d'utilisation
 
